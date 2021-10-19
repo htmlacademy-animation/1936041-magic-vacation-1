@@ -110,6 +110,12 @@
     opacity: 1;
     transform: translateX(0);
     transition-delay: 0.8s;
+
+    @media (orientation: portrait),
+      (max-width: $mobile) and (orientation: landscape) {
+      opacity: 0;
+      transform: translateX(3rem);
+    }
   }
 
   @media (min-width: $stop-scaling) {
